@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uCb-Q9-Vrx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Schools View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SchoolsViewController" customModule="NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eFb-oz-8CU">
+                                <rect key="frame" x="0.0" y="135" width="414" height="727"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-Ud-e7B">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KE1-Pc-0er">
+                                <rect key="frame" x="16" y="96" width="382" height="32"/>
+                                <segments>
+                                    <segment title="List"/>
+                                    <segment title="Map"/>
+                                </segments>
+                            </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-gd-B1A">
+                                <rect key="frame" x="0.0" y="135" width="414" height="727"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zlc-gd-B1A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3TP-Fu-hty"/>
+                            <constraint firstItem="eFb-oz-8CU" firstAttribute="top" secondItem="KE1-Pc-0er" secondAttribute="bottom" constant="8" symbolic="YES" id="JWY-kA-VHB"/>
+                            <constraint firstItem="eFb-oz-8CU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MjV-ea-rbR"/>
+                            <constraint firstItem="eFb-oz-8CU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MqA-4W-auP"/>
+                            <constraint firstItem="eFb-oz-8CU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NNP-hT-hGt"/>
+                            <constraint firstItem="QKd-Ud-e7B" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nh2-nt-voR"/>
+                            <constraint firstItem="KE1-Pc-0er" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Yru-CS-749"/>
+                            <constraint firstItem="Zlc-gd-B1A" firstAttribute="top" secondItem="KE1-Pc-0er" secondAttribute="bottom" constant="8" symbolic="YES" id="ZGG-hs-3ho"/>
+                            <constraint firstItem="Zlc-gd-B1A" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gdf-Yk-JEn"/>
+                            <constraint firstItem="KE1-Pc-0er" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="l2r-4g-waz"/>
+                            <constraint firstItem="QKd-Ud-e7B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n9G-LZ-bVX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KE1-Pc-0er" secondAttribute="trailing" constant="16" id="u9L-hr-Loy"/>
+                            <constraint firstItem="Zlc-gd-B1A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w3Z-yP-5wA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UHy-5W-rvi"/>
+                    <connections>
+                        <outlet property="listTableView" destination="eFb-oz-8CU" id="KFQ-mB-8Y3"/>
+                        <outlet property="loadingIndicator" destination="QKd-Ud-e7B" id="gRx-Na-sCS"/>
+                        <outlet property="mapView" destination="Zlc-gd-B1A" id="h5J-Bp-cBb"/>
+                        <outlet property="segmentedControl" destination="KE1-Pc-0er" id="0je-pC-TjU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="264.50892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dg6-Y0-Uax">
+            <objects>
+                <navigationController id="uCb-Q9-Vrx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Gz-3h-1Uo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="epm-AU-uxb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWQ-rq-RaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="265"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
