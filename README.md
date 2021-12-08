@@ -1,4 +1,4 @@
-# 20211204-CharlesHuang-NYCSchools
+# 20211208-CharlesHuang-NYCSchools
 
 Hi, my name is Charles Huang and this is my solution to the NYC Schools coding challenge.
 
