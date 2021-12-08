@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatCellId" rowHeight="199" id="zgF-TY-GHg" customClass="StatTableViewCell" customModule="NYCSchools" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zgF-TY-GHg" id="lGF-f3-VVg">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Critical Reading Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRF-2d-QqQ">
+                        <rect key="frame" x="20" y="16" width="374" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="750" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj0-Gl-1Qr">
+                        <rect key="frame" x="20" y="53" width="374" height="77"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="64"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PyO-PX-jAr">
+                        <rect key="frame" x="57" y="154" width="300" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="300" id="BFa-4y-smf"/>
+                        </constraints>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Lj0-Gl-1Qr" firstAttribute="top" secondItem="gRF-2d-QqQ" secondAttribute="bottom" constant="16" id="49b-Wd-8RY"/>
+                    <constraint firstItem="PyO-PX-jAr" firstAttribute="centerX" secondItem="lGF-f3-VVg" secondAttribute="centerX" id="4JT-wK-sN1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="PyO-PX-jAr" secondAttribute="bottom" constant="30" id="Fj2-Pp-GNc"/>
+                    <constraint firstItem="gRF-2d-QqQ" firstAttribute="top" secondItem="lGF-f3-VVg" secondAttribute="top" constant="16" id="J8V-H6-luT"/>
+                    <constraint firstItem="gRF-2d-QqQ" firstAttribute="leading" secondItem="lGF-f3-VVg" secondAttribute="leading" constant="20" symbolic="YES" id="JGc-5l-Hh7"/>
+                    <constraint firstItem="PyO-PX-jAr" firstAttribute="top" secondItem="Lj0-Gl-1Qr" secondAttribute="bottom" constant="24" id="Xvz-L3-YlQ"/>
+                    <constraint firstItem="Lj0-Gl-1Qr" firstAttribute="leading" secondItem="lGF-f3-VVg" secondAttribute="leading" constant="20" symbolic="YES" id="aQ3-pz-vfc"/>
+                    <constraint firstAttribute="trailing" secondItem="Lj0-Gl-1Qr" secondAttribute="trailing" constant="20" symbolic="YES" id="v0F-O3-JXx"/>
+                    <constraint firstAttribute="trailing" secondItem="gRF-2d-QqQ" secondAttribute="trailing" constant="20" symbolic="YES" id="zkX-jt-FLs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="scoreLabel" destination="Lj0-Gl-1Qr" id="ONZ-SA-6YW"/>
+                <outlet property="scoreProgressView" destination="PyO-PX-jAr" id="uyt-Up-v02"/>
+                <outlet property="statNameLabel" destination="gRF-2d-QqQ" id="SdD-sT-4IT"/>
+            </connections>
+            <point key="canvasLocation" x="-39" y="-10"/>
+        </tableViewCell>
+    </objects>
+</document>
