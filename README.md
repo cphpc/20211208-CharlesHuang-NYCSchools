@@ -29,3 +29,5 @@ I added a suite of unit tests for both SchoolsViewModel and ResultsViewModel whi
 ### Notes
 
 For both the list and map views, I only included the schools that had valid SAT results. I found that some schools did not have corresponding SAT results and some also had an "s" result. I'm not sure what the "s" stands for but I left it out of the school lists. This ensures that every school on the list has associated SAT takes and scores.
+
+This app supports both light and dark appearances. The reason why I chose to stick with mostly default text colors and fonts is so that it will be 100% compatible when switching between appearances. As well, I tested on small devices (iPhone SE) and large devices (iPad 11"). All iOS devices are supported as well. 
