@@ -2,6 +2,10 @@
 
 Hi, my name is Charles Huang and this is my solution to the NYC Schools coding challenge.
 
+|List View (Light)|List View (Dark)|Map View (Light)|Results View (Light)|Results View (Dark)|
+|---|---|---|---|---|
+|![list](https://user-images.githubusercontent.com/1176895/145280963-b3a26531-179d-4441-9bf0-908fbb88cda9.png)|![list_dark](https://user-images.githubusercontent.com/1176895/145280986-106d9082-99a1-4a1e-bd4d-649106ae4626.png)|![map](https://user-images.githubusercontent.com/1176895/145281044-a3e13f07-e015-4c54-a1f2-4ec1c503b376.png)|![results_1](https://user-images.githubusercontent.com/1176895/145281120-7b815d15-1c31-4379-8b6b-dcaa05df8282.png)|![results_dark](https://user-images.githubusercontent.com/1176895/145281140-5fbeafde-8396-4fa9-964e-a09e43c9567e.png)|
+
 ### Solution
 
 I decided to show the list of high schools in two formats. One in a generic list view that groups the schools into sections by the cities in which they are located in. The second format is showing the schools within a map view where each school is an annotated pin on the map. For both solutions, you can click on the cell or pin and push to the SAT results controller.
